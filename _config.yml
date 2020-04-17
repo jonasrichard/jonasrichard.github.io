@@ -81,7 +81,7 @@ lang: en-GB # Set the site language
 title: "Thoughts on backend and scaling" # Site name or title, also used in jekyll-seo-tag
 logo: "/assets/logos/logo.svg" # Site logo, also used in jekyll-seo-tag
 description: "Professional blog" # Site description and default description, also used in jekyll-seo-tag
-url: "https://jonasrichard.com" # Site url, also used in jekyll-seo-tag
+url: "https://jonasrichard.github.io" # Site url, also used in jekyll-seo-tag
 baseurl: ""
 repo: "https://github.com/jonasrichard/jonasrichard.github.io"
 email: "richard.jonas.76@gmail.com"
