@@ -9,7 +9,15 @@
 {% if feature_text or feature_image %}
   <div class="feature"{% if feature_image %} style="background-image: url({{ feature_image }})"{% endif %}>
     <div class="container  typeset">
+      <h2 id="blog-title">Thoughts on backend and scaling</h2>
+      {% comment %}
       {{ feature_text | markdownify }}
+      {% endcomment %}
+    </div>
+  </div>
+  <div class="author" style="margin-top: -75px; text-align: center">
+    <div class="author-thumbnail">
+      <img src="/assets/fb-profil.jpg" style="border-radius: 50%; border: 5px solid transparent; background: white; width: 150px" />
     </div>
   </div>
 {% endif %}

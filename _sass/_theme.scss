@@ -45,7 +45,7 @@ body {
 
 .feature {
   padding-bottom: .4rem;
-  margin-bottom: 1.6rem;
+  //margin-bottom: 1.6rem;
   text-align: center;
   background: $featureBackgroundColour;
   background-size: cover;
@@ -133,6 +133,14 @@ body {
 .feature,
 .footer {
   @include flex(0, 0, auto);
+}
+
+#blog-title {
+    color: white;
+    padding: 0 20px;
+    background-color: rgba(32, 32, 32, 0.5);
+    font: normal 500 48px rock salt,cursive;
+    line-height: 150%;
 }
 
 .content {
