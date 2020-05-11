@@ -13,47 +13,48 @@ html {
 body {
   padding: 0;
   margin: 0;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
 }
 
-/* Add padding to all of the .container child elements */
-/* .container > * {
-  padding: 20px;
-} */
 .container {
-  color: white;
+  color: black;
   font-family: helvetica, arial, sans-serif;
   display: flex;
   flex-wrap: wrap;
-  max-width: 1000px;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 90%;
 }
 
-header {
-  background: skyblue;
-  flex: 1 0 100%;
-  order: 2;
-}
 main {
-  background: slategray;
   order: 3;
-  flex: 1 1 500px;
+  flex: 1 1 600px;
 }
 nav {
+  height: 2.5em;
+  margin-bottom: 0.5em;
   text-align: center;
-  background: cadetblue;
-  order: 1;
-  flex: 1 0 200px;
 }
 aside {
-  background: seagreen;
   order: 4;
-  flex: 1 0 200px;
+  flex: 1 0 150px;
 }
 footer {
-  background: darkslateblue;
   flex: 1 0 100%;
   order: 5;
+}
+
+.author {
+  margin-top: -75px;
+  text-align: center;
+}
+
+.author-photo {
+  border-radius: 50%;
+  border: 5px solid transparent;
+  background: white;
+  width: 150px;
 }
 
 h1, h2, h3 {
@@ -71,6 +72,11 @@ p {
   height: 300px;
 }
 
+.feature-title-box {
+  display: flex;
+  justify-content: center;
+}
+
 .feature .blog-title {
   color: white;
   padding: 0 20px;
@@ -84,8 +90,10 @@ nav ul {
   list-style: none;
 }
 nav li {
+  color: black;
   display: inline-block;
   margin-left: 0.5em;
   margin-right: 0.5em;
   font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 1.2em;
 }
