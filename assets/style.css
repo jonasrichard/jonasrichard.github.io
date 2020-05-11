@@ -1,0 +1,93 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+  }
+  
+  .container {
+    color: black;
+    font-family: helvetica, arial, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 90%;
+  }
+  
+  main {
+    order: 3;
+    flex: 1 1 600px;
+  }
+  nav {
+    height: 2.5em;
+    margin-bottom: 0.5em;
+    text-align: center;
+  }
+  aside {
+    order: 4;
+    flex: 1 0 150px;
+  }
+  footer {
+    flex: 1 0 100%;
+    order: 5;
+  }
+  
+  .author {
+    margin-top: -75px;
+    text-align: center;
+  }
+  
+  .author-photo {
+    border-radius: 50%;
+    border: 5px solid transparent;
+    background: white;
+    width: 150px;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Lora', serif;
+  }
+  
+  p {
+    font-family: 'Nunito', sans-serif;
+  }
+  
+  .feature {
+    background-image: url("https://jonasrichard.github.io/assets/wood-desk-mac-water.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+  }
+  
+  .feature-title-box {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .feature .blog-title {
+    color: white;
+    padding: 0 20px;
+    background-color: rgba(32, 32, 32, 0.5);
+    font: normal 500 2.5em 'Rock Salt', cursive;
+    line-height: 150%;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  nav li {
+    color: black;
+    display: inline-block;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 1.2em;
+  }
