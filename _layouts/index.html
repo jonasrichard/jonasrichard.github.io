@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include site-head.html %}
+  <body>
+    <div class="head-container">
+      {% include site-nav.html %}
+      <header>
+        <div class="feature">
+          <div class="feature-title-box">
+            <h1 class="blog-title">Thoughts on backend and scaling</h1>
+          </div>
+        </div>
+      </header>
+      <div class="author">
+        <img src="https://jonasrichard.github.io/assets/fb-profil.jpg" class="author-photo">
+      </div>
+    </div>
+    <div class="container">
+      <main id="main-content">
+        <h2>main content</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h3>Another chapter</h3>
+        {% for post in site.posts %}
+        <p>{{ post.title }}</p>
+        {% endfor %}
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <code>
+          def func(x: i32) -> f32 {
+            0.0
+          }
+        </code>
+      </main>
+      <aside>
+        <h2>sidebar</h2>
+        <p>related content</p>
+        {% include post-list.html %}
+      </aside>
+
+      <footer>
+        <h2>footer</h2>
+      </footer>
+    </div>
+  </body>
+</html>

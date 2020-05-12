@@ -28,4 +28,15 @@ fn main() -> Result<(), !> {
 
 Retorts have the "cap" and the "cucurbit" made into one. The anbik is also called the raʾs (head) of the cucurbit. The liquid in the cucurbit is heated or boiled; the vapour rises into the anbik, where it cools by contact with the walls and condenses, running down the spout into the receiver. A modern descendant of the alembic is the pot still, used to produce distilled beverages.
 
+```elixir
+defmodule Store.ProductHandler do
+  require Logger
+
+  def init(protocol, _req, _opts) do
+    Logger.info("In init/3 #{inspect protocol}")
+    {:upgrade, :protocol, :cowboy_rest}
+  end
+end
+```
+
 _Originally from [Alembic - Wikipedia](https://en.wikipedia.org/wiki/Alembic)_
