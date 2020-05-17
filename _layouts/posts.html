@@ -14,20 +14,25 @@
     </div>
     <div class="container">
       <main id="main-content">
-        <h2>main content</h2>
+        <h2>Posts</h2>
+
+        <!--
+          Colors for the h2-3 elements
+          Sample images in the excerpt
+          More posts
+        -->
+
         {% for post in paginator.posts %}
-        <p><a href="{{ post.url }}">{{ post.title }}</a></p>
+        <h3 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <p class="post-date">{{ post.date | date_to_string }}</p>
+        <p class="post-excerpt">{{ post.excerpt }}</p>
         {% endfor %}
       </main>
       <aside>
-        <h2>Recent posts</h2>
-        <p>related content</p>
-        {% include post-list.html %}
+        <h3>Categories</h3>
       </aside>
 
-      <footer>
-        <h2>footer</h2>
-      </footer>
+      {% include site-footer.html %}
     </div>
   </body>
 </html>

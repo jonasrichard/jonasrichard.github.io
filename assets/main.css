@@ -39,6 +39,10 @@ aside {
 footer {
   flex: 1 0 100%;
   order: 5;
+  text-align: center;
+  border-top: 1px solid gray;
+  margin-top: 20px;
+  padding-top: 10px;
 }
 
 .author {
@@ -92,6 +96,31 @@ nav li {
   margin-right: 0.5em;
   font-family: 'PT Sans Narrow', sans-serif;
   font-size: 1.2em;
+}
+
+.social {
+  margin: 0 16px 0 16px;
+  width: 32px;
+}
+
+a {
+  color: #eaa048;
+  text-decoration: none;
+  transition: all 0.25s;
+}
+
+a:hover {
+  color: #eaca48;
+}
+
+.post-title {
+  font-size: 1.4em;
+  margin-top: 1.5em;
+}
+
+.post-date {
+  font-size: 0.8em;
+  margin-top: -1em;
 }
 
 /* Highlight styles */

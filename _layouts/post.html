@@ -14,6 +14,8 @@
     </div>
     <div class="container">
       <main id="main-content">
+        <h2>{{ page.title }}</h2>
+
         {{ content }}
       </main>
       <aside>
@@ -22,9 +24,7 @@
         {% include post-list.html %}
       </aside>
 
-      <footer>
-        <h2>footer</h2>
-      </footer>
+      {% include site-footer.html %}
     </div>
   </body>
 </html>
