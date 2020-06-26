@@ -123,6 +123,16 @@ a:hover {
   margin-top: -1em;
 }
 
+/* Markdown styles */
+
+.language-plaintext {
+    color: #c74821;
+}
+
+p {
+    line-height: 1.4em;
+}
+
 /* Highlight styles */
 
 .highlight table td { padding: 5px; }
