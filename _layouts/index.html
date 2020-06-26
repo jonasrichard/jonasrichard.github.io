@@ -17,11 +17,29 @@
     </div>
     <div class="container">
       <main id="main-content">
-        {% for post in site.posts %}
-        <h3 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-        <p class="post-date">{{ post.date | date_to_string }}</p>
-        <p class="post-excerpt">{{ post.excerpt }}</p>
-        {% endfor %}
+        <h2>I have migrated my blog to github</h2>
+
+        <p>Blogger is a good place to start to write and maintain a blog but as times went by
+        I needed to upgrade the template which is a nightmare in Blogger. Thousand of lines of
+        XMLs which folded in the editor randomly, long inline Javascript plugins which came
+        from the downloaded templates. I am not a web designer, not even a full stack developer
+        so maintain old plugins, templates was very hard. I like minimal technical solutions,
+        so after a long inactivity I gave a try to static page generators.
+        </p>
+
+        <p>I didn't want to go into the street of Medium, even if design looks good, I didn't
+        need the features and restrictions it comes with it. So here we are, with Jekyll in
+        Github.</p>
+
+        <p>I write technical notes which can be interesting and useful for others, so during
+        migration I also deleted a lot of non-relevant entries. Here are the hopefully growing
+        list of my posts.</p>
+
+        <ul>
+          {% for post in site.posts %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
       </main>
       <aside>
       </aside>

@@ -1,8 +1,10 @@
 ---
 layout: post
 title:  "Elixir - REST with Cowboy"
-categories:
-- Elixir
+tags:
+  - Cowboy
+  - Elixir
+  - REST
 aside: true
 ---
 To be honest, in the last couple of months when I implemented REST interfaces in cowboy, I always implemented the happy path, and I followed the okay-we-will-see principle in case of corner cases. That didn't sound good enough for me so I decided to dig deeper into how to properly implement a REST interface in cowboy. The first thing we need to take care is how many handler module we will need? The fewer is the better of course. We don't want to maintain a bunch of module for a bunch of different HTTP methods. It sounded logical for me that one module for one REST target (product, shop, user, etc).

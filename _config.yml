@@ -32,8 +32,14 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-tagging
 
 exclude:
+  - README.md
+  - new
+
+tag_page_layout: tag
+tag_page_dir: blog/tags
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
