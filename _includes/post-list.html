@@ -1,7 +1,19 @@
-{% if paginator.posts %}
-    <ul>
-        {% for page in paginator.posts %}
-        <li>{{ page.excerpt }}</li>
-        {% endfor %}
-    </ul>
-{% endif %}
+{% comment %}
+Iterator over the posts and if the posts has any tag equals to any tag of the current post
+it is related
+{% endcomment %}
+<ul>
+{% for p in site.posts %}
+  {% assign print = false %}
+  {% for t in p.tags %}
+    {% for t2 in page.tags %}
+      {% if t == t2 %}
+        {% assign print = true %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+  {% if print %}
+    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>

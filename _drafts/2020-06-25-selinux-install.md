@@ -15,3 +15,7 @@ sepolicy manpage -a -p /usr/share/man/man9
 mandb
 man -k selinux
 ```
+
+nginx can connect to network
+
+`setsebool -P httpd_can_network_connect 1`

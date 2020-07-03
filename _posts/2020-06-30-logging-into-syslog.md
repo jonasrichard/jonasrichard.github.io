@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Logging into Syslog"
+title:  "Logging into Syslog with Go"
 tags:
   - DevOps
   - Go

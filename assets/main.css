@@ -58,7 +58,8 @@ footer {
 }
 
 h1, h2, h3 {
-  font-family: 'Lora', serif;
+  font-family: 'Oswald', sans-serif;
+  /* font-family: 'Lora', serif; */
   padding: 0.5em 0 0.3em 0;
   border-bottom: 1px solid gray;
 }
