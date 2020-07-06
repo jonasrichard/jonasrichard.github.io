@@ -32,6 +32,7 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-sitemap
   - jekyll-tagging
 
 exclude:
