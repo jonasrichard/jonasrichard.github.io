@@ -1,12 +1,11 @@
 ---
 layout: post
-title:  "Install and setup SE linux"
+title:  "More about SELinux"
 tags:
   - DevOps
   - Linux
 aside: true
 ---
-
 ```bash
 ls -Z file
 yum install -y policycoreutils-python-utils
@@ -15,7 +14,3 @@ sepolicy manpage -a -p /usr/share/man/man9
 mandb
 man -k selinux
 ```
-
-nginx can connect to network
-
-`setsebool -P httpd_can_network_connect 1`
