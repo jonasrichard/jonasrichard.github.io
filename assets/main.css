@@ -26,16 +26,20 @@ body {
 main {
   order: 3;
   flex: 1 1 600px;
+  width: 90%;
 }
+
 nav {
   height: 2.5em;
   margin-bottom: 0.5em;
   text-align: center;
 }
+
 aside {
   order: 4;
   flex: 1 0 150px;
 }
+
 footer {
   flex: 1 0 100%;
   order: 5;
@@ -119,7 +123,13 @@ a:hover {
 pre.highlight {
     background-color: #f0f0f0;
     padding: 0.5em;
+    overflow: scroll;
 }
+
+/*.highlighter-rouge {
+    width: calc(100% - 20px);
+    overflow: scroll;
+}*/
 
 .post-title {
   font-size: 1.4em;
