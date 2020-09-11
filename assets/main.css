@@ -1,3 +1,9 @@
+/*@media max-width: 600px {
+  pre.highlight {
+      width: 90vw;
+  }
+}*/
+
 /* border-box fix */
 html {
   box-sizing: border-box;
@@ -63,7 +69,7 @@ footer {
 
 h1, h2, h3 {
   font-family: 'Oswald', sans-serif;
-  /* font-family: 'Lora', serif; */
+  /* font-y: 'Lora', serif; */
   padding: 0.5em 0 0.3em 0;
   border-bottom: 1px solid gray;
 }
@@ -122,6 +128,7 @@ a:hover {
 
 pre.highlight {
     background-color: #f0f0f0;
+    overscroll-behavior-y: auto;
     padding: 0.5em;
     overflow: scroll;
 }

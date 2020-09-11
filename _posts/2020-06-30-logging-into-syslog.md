@@ -152,8 +152,8 @@ the cases is good enough.
 ```conf
 $FileCreateMode 0644
 
-$template offerFormat,"%TIMESTAMP:::date-rfc3339% %HOSTNAME% %msg%\\n"
-local0.*		/var/log/my-app.log;offerFormat
+$template myFormat,"%TIMESTAMP:::date-rfc3339% %HOSTNAME% %msg%\n"
+local0.*		/var/log/my-app.log;myFormat
 
 $FileCreateMode 0600
 ```
