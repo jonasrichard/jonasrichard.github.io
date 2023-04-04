@@ -17,11 +17,7 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-tagging
 
 exclude:
   - README.md
   - Gemfile*
-
-tag_page_layout: tag
-tag_page_dir: blog/tags

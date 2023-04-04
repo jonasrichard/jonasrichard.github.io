@@ -1,11 +1,8 @@
 source "https://rubygems.org"
 
-#gem "jekyll", "~> 4.3.2"
-gem "github-pages", group: :jekyll_plugins
+git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
-group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.6"
-  gem "jekyll-paginate"
-  gem "jekyll-sitemap"
-  gem "jekyll-tagging"
-end
+gem "github-pages", "= 228"
+
+gem "jekyll-include-cache", "= 0.2.1"
+gem "jekyll-octicons", "~> 14.2"
