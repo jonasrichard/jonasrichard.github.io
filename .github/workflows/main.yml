@@ -5,8 +5,16 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/getzola/zola:v0.21.0
     steps:
-     - name: Build site with Zola
-       run: zola build
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Zola Build
+        uses: shalzz/zola-deploy-action@master
+        env:
+          BUILD_ONLY: true
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './public'
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
