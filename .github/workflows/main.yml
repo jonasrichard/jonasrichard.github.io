@@ -5,6 +5,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
+    permissions:
+      id-token: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
