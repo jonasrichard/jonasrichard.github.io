@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+
+  <link rel="stylesheet" href="/main.css" />
+  
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-V8TDLSY2G3"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-V8TDLSY2G3");
+</script>
+
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+      const btn = document.querySelector("#toggle-mode");
+
+      function handleDarkMode() {
+        const darkMode = localStorage.getItem("dark-mode");
+
+        if (darkMode == "enabled") {
+          document.body.classList.add("dark-mode");
+          document.querySelector("#dark-mode").style.display = "none";
+          document.querySelector("#light-mode").style.display = "inline";
+        } else {
+          document.body.classList.remove("dark-mode");
+          document.querySelector("#dark-mode").style.display = "inline";
+          document.querySelector("#light-mode").style.display = "none";
+        }
+      }
+
+      handleDarkMode();
+
+      btn.addEventListener("click", function () {
+        const darkMode = localStorage.getItem("dark-mode");
+
+        if (darkMode == "enabled") {
+          localStorage.setItem("dark-mode", "disabled");
+        } else {
+          localStorage.setItem("dark-mode", "enabled");
+        }
+
+        handleDarkMode();
+      });
+    });
+  </script>
+</head>
+
+  <body>
+    <div class="head-container">
+      <nav>
+  <span id="toggle-mode"
+    ><span id="light-mode" class="material-icons">light_mode</span
+    ><span id="dark-mode" class="material-icons">dark_mode</span></span
+  >
+  
+  <ul>
+    <li><a href="/en/blog">blog</a></li>
+    <li><a href="/en/home">home</a></li>
+  </ul>
+  
+  <span id="toggle-lang"
+    ><a href="/en/"><img src="/icons/uk.png" /></a
+    ><a href="/hu/"><img src="/icons/hun.png" /></a
+  ></span>
+</nav>
+
+
+      <header>
+        <div class="feature">
+          <div class="feature-title-box">
+            <h1 class="blog-title">Thoughts on backend and scaling</h1>
+          </div>
+        </div>
+      </header>
+      <div class="author">
+        <img src="/images/fb-profil.jpg" class="author-photo" />
+      </div>
+    </div>
+    <div class="container">
+      <main id="main-content"><h1 id="my-journey">My journey</h1>
+<p>Hey, my name is Richard Jonas, I am a software engineer interested in designing
+technical solutions, coding, learning new technologies. I am working as an
+architect but it can be seen as a staff engineer with strong technical flavour.</p>
+<p>I was born in 1976 and I was 10 year old when first met with Basic but I didn't
+have computer to try it, so I was just reading the book. Then when I was 12
+my parents managed to buy a used Commodore Vic-20 computer. It had 3583 bytes
+memory, yes less than 4K. Amazing. So I learnt how to code in Basic and
+Assembly since every byte counted. I was making line and circle drawers with
+character rewrite, very old technique.</p>
+<p>In high-school I didn't get too much new programming skills but more
+mechanical engineering skills. It didn't poisoned me, I stayed at coding. At
+the University of Debrecen I learnt the computer science behind programming.
+Since I got very good grades I managed to start my PhD studies at the same
+university. At that time informatics wasn't really an accredited branch of
+natural sciences, so the system pushed me to do more mathematics than computer
+science. At the same time I started to work in the industry and I found more
+compelling to develop real systems than more computer science.</p>
+<p>During the years I used new technologies like Java, yeah at that time it was
+new, like 2001. We developed a portal engine before Hibernate and Spring
+framework really appeared.</p>
+<p>In 2007 I was lucky to have an opportunity to learn Erlang during developing
+a distributed, remote call center solution for McDrive restaurants to the USA.
+I was fascinated how easy and common sense to describe parallel algorithms
+with the actor model. Then I couldn't see the Java thread model as a cool thing
+any longer.</p>
+<p>After some Java work at Morgan Stanley and Epam in Budapest, I went to Erlang
+Solutions where I learned even more about Erlang and actor-based concurrency.</p>
+<p>That special knowledge brought me to Barcelona, Spain to Wallapop where we
+optimized and developed the high-throughput chat solution. One day the cluster
+pumped out 1TB of XMPP messages at 2018.</p>
+<p>Erlang and Elixir drove me then to Derivco/Betway, then the company started to
+use Golang and I happily accepted the opportunity to learn Golang.</p>
+<p>In the meantime I saw how Rust is emerging and couldn't resist to learn that.
+I think Rust is the next big thing, so far no other mainstream language
+managed to define so well the object lifetime and the fearless concurrency.</p>
+<p>Currently I am looking for challenges in Rust, Golang, not sure if I want to
+go back to the Erlang/Elixir world now.</p>
+<h2 id="reading-list">Reading list</h2>
+<ul>
+<li><a href="http://book.mixu.net/distsys/">Distributed systems for fun and profit</a>
+is a good reading, presenting complex concepts of distributed systems in an
+easy-to-catch manner.</li>
+<li><a href="https://www.amazon.es/Okay-Manage-Your-Step-Step/dp/0470605308">It is okay to manage your boss</a>
+is useful if you need to manage up and/or manage yourself in an environment
+when the leadership around is not enough for you. I have read multiple books
+in this topic, I found this one the most handy.</li>
+<li><a href="https://www.netmeister.org/blog/software-engineering-laws.html">Software engineering laws</a>
+This is what it is. My favourite is Conwey's law by far. Everbody knows about
+that and nobody can stop it.</li>
+<li><a href="https://www.infoq.com/articles/avoiding-technical-bankruptcy/">Avoiding technical bankruptcy</a>
+One of the best explanation of technical debts and bankruptcy which basically
+the lack of courage to properly model and abstract requirements.</li>
+<li><a href="https://www.infoq.com/articles/event-driven-finding-seams/">From monolith to event-driven</a>
+is a good article what strategy we can use if we want to introduce event
+sourcing to a legacy application.</li>
+<li><a href="https://infoq.com/articles/value-streams-stuck-past">Are your "value streams" keeping you stuck in the past?</a>
+shows how value stream disempowers your workers can cause burn-out easier
+than else.</li>
+</ul>
+</main>
+      <aside>
+        <p>
+          ,,If debugging is the process of removing software bugs, then
+          programming must be the process of putting them in.''
+        </p>
+
+        <p>-- Dijkstra</p>
+      </aside>
+
+      <footer>
+  <a href="https://www.facebook.com/richard.jonas.76"
+    ><img class="social" src="/icons/facebook.svg"
+  /></a>
+  <a href="https://www.linkedin.com/in/rich%C3%A1rd-j%C3%B3n%C3%A1s-ba1971b/"
+    ><img class="social" src="/icons/linkedin.svg"
+  /></a>
+  <a href="https://github.com/jonasrichard"
+    ><img class="social" src="/icons/github.svg"
+  /></a>
+</footer>
+
+    </div>
+  </body>
+</html>

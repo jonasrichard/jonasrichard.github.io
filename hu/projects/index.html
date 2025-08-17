@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="hu">
+  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projektjeim</title>
+
+  <link rel="stylesheet" href="/main.css" />
+  
+  <link rel="stylesheet" href="/hu.css" />
+  
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-V8TDLSY2G3"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-V8TDLSY2G3");
+</script>
+
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+      const btn = document.querySelector("#toggle-mode");
+
+      function handleDarkMode() {
+        const darkMode = localStorage.getItem("dark-mode");
+
+        if (darkMode == "enabled") {
+          document.body.classList.add("dark-mode");
+          document.querySelector("#dark-mode").style.display = "none";
+          document.querySelector("#light-mode").style.display = "inline";
+        } else {
+          document.body.classList.remove("dark-mode");
+          document.querySelector("#dark-mode").style.display = "inline";
+          document.querySelector("#light-mode").style.display = "none";
+        }
+      }
+
+      handleDarkMode();
+
+      btn.addEventListener("click", function () {
+        const darkMode = localStorage.getItem("dark-mode");
+
+        if (darkMode == "enabled") {
+          localStorage.setItem("dark-mode", "disabled");
+        } else {
+          localStorage.setItem("dark-mode", "enabled");
+        }
+
+        handleDarkMode();
+      });
+    });
+  </script>
+</head>
+
+  <body>
+    <div class="head-container">
+      <nav>
+  <span id="toggle-mode"
+    ><span id="light-mode" class="material-icons">light_mode</span
+    ><span id="dark-mode" class="material-icons">dark_mode</span></span
+  >
+  
+  <ul>
+    <li><a href="/hu/about">magamról</a></li>
+    <li><a href="/hu/projects">projektjeim</a></li>
+    <li><a href="/hu/hobby">hobbi</a></li>
+  </ul>
+  
+  <span id="toggle-lang"
+    ><a href="/en/"><img src="/icons/uk.png" /></a
+    ><a href="/hu/"><img src="/icons/hun.png" /></a
+  ></span>
+</nav>
+
+
+      <header>
+        <div
+          class="feature"
+          style="
+            background-image: url(&quot;/images/bluegray-laptop-hand.jpg&quot;);
+            background-position: 0px -180px;
+          "
+        >
+          <div class="feature-title-box">
+            <h1 class="blog-title">Jónás Richárd - szoftver architect</h1>
+          </div>
+        </div>
+      </header>
+      <div class="author">
+        <img src="/images/fb-profil.jpg" class="author-photo" />
+      </div>
+    </div>
+    <div class="container">
+      <main id="main-content"><h1 id="projektjeim">Projektjeim</h1>
+<h3 id="vamraktar-nyilvantarto">Vámraktár nyilvántartó</h3>
+<p>‟Az első webes projektemen megtanultam mennyire fontos a jó teljesítmény és a
+pontosság„</p>
+<p>Igazi LAMP project (Linux, Apache, MySQL, PHP), ahogy mind a négy
+technológiát megismertem. Szüleim import-export kereskedelmi vállalkozásához
+fejlesztettem ezt a szoftvert, ami a havi ÁFA fizetés alapja volt. Mondanom sem
+kell, hogy a pénzügyi felelősség itt óriási volt, ez nem egy kockázati tőkes
+pénze volt... Szóval aki kételkedik, hogy komoly intranetes rendszert lehet-e
+fejleszteni ezekkel a technológiákkal, próbálja ki maga is.</p>
+<p>A vámraktár jelentéseket LaTeX által generált Postscript dokumentumokba
+generálta a rendszer, a vámosok gyönyörködtek a lézernyomtató által nyomtatott
+reportokban.</p>
+<h3 id="ejson-json-konverter">ejson JSON konverter</h3>
+<p>A Java világban számtalan eszköz könnyíti meg a programozók életét ha adatokat
+valamilyen külső formában akarnak tárolni (adatbázis, bináris file, web).
+Töménytelen számú annotáció alapú JSON konverter létezik.</p>
+<p>Erlang-ban egy kicsit más a helyzet, ez olyan csináld magad világ, mindenki a
+saját kényelmére szab egy low-level JSON konvertert. Én erre találtam ki egy
+deklaratív keretrendszert, amivel szabályokat meghatározva az ejson
+automatikusan átkonvertálja az Erlang adatokat JSON formátumba. És ami a múltban
+még fájdalmasabb volt, JSON-ből automatikusan konvertál Erlang termekbe -
+hibaellenőrzés mellett.</p>
+<p>Ez egy open source projekt, a github-on hosztolom.</p>
+</main>
+      <aside></aside>
+
+      <footer>
+  <a href="https://www.facebook.com/richard.jonas.76"
+    ><img class="social" src="/icons/facebook.svg"
+  /></a>
+  <a href="https://www.linkedin.com/in/rich%C3%A1rd-j%C3%B3n%C3%A1s-ba1971b/"
+    ><img class="social" src="/icons/linkedin.svg"
+  /></a>
+  <a href="https://github.com/jonasrichard"
+    ><img class="social" src="/icons/github.svg"
+  /></a>
+</footer>
+
+    </div>
+  </body>
+</html>

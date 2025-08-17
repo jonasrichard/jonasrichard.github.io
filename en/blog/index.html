@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog</title>
+
+  <link rel="stylesheet" href="/main.css" />
+  
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-V8TDLSY2G3"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-V8TDLSY2G3");
+</script>
+
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+      const btn = document.querySelector("#toggle-mode");
+
+      function handleDarkMode() {
+        const darkMode = localStorage.getItem("dark-mode");
+
+        if (darkMode == "enabled") {
+          document.body.classList.add("dark-mode");
+          document.querySelector("#dark-mode").style.display = "none";
+          document.querySelector("#light-mode").style.display = "inline";
+        } else {
+          document.body.classList.remove("dark-mode");
+          document.querySelector("#dark-mode").style.display = "inline";
+          document.querySelector("#light-mode").style.display = "none";
+        }
+      }
+
+      handleDarkMode();
+
+      btn.addEventListener("click", function () {
+        const darkMode = localStorage.getItem("dark-mode");
+
+        if (darkMode == "enabled") {
+          localStorage.setItem("dark-mode", "disabled");
+        } else {
+          localStorage.setItem("dark-mode", "enabled");
+        }
+
+        handleDarkMode();
+      });
+    });
+  </script>
+</head>
+
+  <body>
+    <div class="head-container">
+      <nav>
+  <span id="toggle-mode"
+    ><span id="light-mode" class="material-icons">light_mode</span
+    ><span id="dark-mode" class="material-icons">dark_mode</span></span
+  >
+  
+  <ul>
+    <li><a href="/en/blog">blog</a></li>
+    <li><a href="/en/home">home</a></li>
+  </ul>
+  
+  <span id="toggle-lang"
+    ><a href="/en/"><img src="/icons/uk.png" /></a
+    ><a href="/hu/"><img src="/icons/hun.png" /></a
+  ></span>
+</nav>
+
+
+      <header>
+        <div class="feature">
+          <div class="feature-title-box">
+            <h1 class="blog-title">Thoughts on backend and scaling</h1>
+          </div>
+        </div>
+      </header>
+      <div class="author">
+        <img src="/images/fb-profil.jpg" class="author-photo" />
+      </div>
+    </div>
+    <div class="container">
+      <main id="main-content"><p>Soon</p>
+</main>
+      <aside>
+        <p>
+          ,,If debugging is the process of removing software bugs, then
+          programming must be the process of putting them in.''
+        </p>
+
+        <p>-- Dijkstra</p>
+      </aside>
+
+      <footer>
+  <a href="https://www.facebook.com/richard.jonas.76"
+    ><img class="social" src="/icons/facebook.svg"
+  /></a>
+  <a href="https://www.linkedin.com/in/rich%C3%A1rd-j%C3%B3n%C3%A1s-ba1971b/"
+    ><img class="social" src="/icons/linkedin.svg"
+  /></a>
+  <a href="https://github.com/jonasrichard"
+    ><img class="social" src="/icons/github.svg"
+  /></a>
+</footer>
+
+    </div>
+  </body>
+</html>
