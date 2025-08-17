@@ -6,12 +6,15 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     steps:
-      - name: checkout
+      - name: Checkout
         uses: actions/checkout@v4
-      - name: build_and_deploy
+      - name: Zola Build
         uses: shalzz/zola-deploy-action@master
         env:
-          # Target branch
-          PAGES_BRANCH: gh-pages
-          # Or if publishing to the same repo, use the automatic token
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './public'
+      - name: Deploy to Github Pages
+        uses: actions/deploy-pages@v4
