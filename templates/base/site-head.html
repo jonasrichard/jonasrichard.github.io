@@ -1,0 +1,76 @@
+{% macro head(title) %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title }}</title>
+
+  <link rel="stylesheet" href="/main.css" />
+  {% if (page.extra.lang is defined and page.extra.lang == "hu") or
+  (section.extra.lang is defined and section.extra.lang == "hu") %}
+  <link rel="stylesheet" href="/hu.css" />
+  {% endif %}
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+  {% include "site-ga.html" %}
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+      const btn = document.querySelector("#toggle-mode");
+
+      function handleDarkMode() {
+        const darkMode = localStorage.getItem("dark-mode");
+
+        if (darkMode == "enabled") {
+          document.body.classList.add("dark-mode");
+          document.querySelector("#dark-mode").style.display = "none";
+          document.querySelector("#light-mode").style.display = "inline";
+        } else {
+          document.body.classList.remove("dark-mode");
+          document.querySelector("#dark-mode").style.display = "inline";
+          document.querySelector("#light-mode").style.display = "none";
+        }
+      }
+
+      handleDarkMode();
+
+      btn.addEventListener("click", function () {
+        const darkMode = localStorage.getItem("dark-mode");
+
+        if (darkMode == "enabled") {
+          localStorage.setItem("dark-mode", "disabled");
+        } else {
+          localStorage.setItem("dark-mode", "enabled");
+        }
+
+        handleDarkMode();
+      });
+    });
+  </script>
+</head>
+{% endmacro head %}

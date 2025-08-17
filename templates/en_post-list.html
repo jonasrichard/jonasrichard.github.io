@@ -1,0 +1,27 @@
+{% import "base/site-head.html" as head %}
+
+<!DOCTYPE html>
+<html lang="en">
+  {{ head::head(title = page.title | default(value=section.title)) }}
+  <body>
+    <div class="head-container">
+      {% include "base/site-nav.html" %}
+      <header>
+        <div class="feature">
+          <div class="feature-title-box">
+            <h1 class="blog-title">Thoughts on backend and scaling</h1>
+          </div>
+        </div>
+      </header>
+      <div class="author">
+        <img src="/images/fb-profil.jpg" class="author-photo" />
+      </div>
+    </div>
+    <div class="container">
+      <main id="main-content">Come soon</main>
+      <aside></aside>
+
+      {% include "base/site-footer.html" %}
+    </div>
+  </body>
+</html>
