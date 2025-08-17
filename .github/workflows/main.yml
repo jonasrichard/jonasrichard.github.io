@@ -1,24 +1,12 @@
-# On every push this script is executed
-on: push
-name: Build and deploy GH Pages
+name: Build and deploy Github Pages
+on:
+  push:
+    branches: [master]
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
-    permissions:
-      id-token: write
+    container:
+      image: ghcr.io/getzola/zola:v0.21.0
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Zola Build
-        uses: shalzz/zola-deploy-action@master
-        env:
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './public'
-        env:
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Deploy to Github Pages
-        uses: actions/deploy-pages@v4
+     - name: Build site with Zola
+       run: zola build
