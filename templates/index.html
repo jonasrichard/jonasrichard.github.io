@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0; url=/en/" />
+    <script>
+      // Check if the navigator.language property is available
+      if (navigator.language) {
+        // Get the first two characters of the language code
+        const lang = navigator.language.substring(0, 2);
+
+        // If the language is Hungarian (hu), redirect to the Hungarian page
+        if (lang === "hu") {
+          window.location.href = "/hu/";
+        } else {
+          // Otherwise, redirect to the English page
+          window.location.href = "/en/";
+        }
+      }
+    </script>
+    <title>Redirecting...</title>
+  </head>
+  <body>
+    <p>
+      Please wait, redirecting you to the correct language version of the site.
+    </p>
+  </body>
+</html>

@@ -1,3 +1,3 @@
 +++
-redirect_to = "en/blog"
+template = "index.html"
 +++
