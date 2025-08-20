@@ -1,6 +1,5 @@
 +++
-template = "en_post-list.html"
-title = "Blog"
+redirect_to = "en/home"
 
 [extra]
 lang = "en"
