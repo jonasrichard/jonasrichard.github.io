@@ -1,3 +1,3 @@
 +++
-template = "index.html"
+redirect_to = "home"
 +++

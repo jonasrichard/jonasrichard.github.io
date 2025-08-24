@@ -1,19 +1,27 @@
-{#
-Iterator over the posts and if the posts has any tag equals to any tag of the current post
-it is related
-#}
-<ul>
-{% for p in site.posts %}
-  {% set print = false %}
-  {% for t in p.tags %}
-    {% for t2 in page.tags %}
-      {% if t == t2 %}
-        {% set print = true %}
-      {% endif %}
-    {% endfor %}
-  {% endfor %}
-  {% if print %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-  {% endif %}
-{% endfor %}
-</ul>
+{% import "base/site-head.html" as head %}
+
+<!DOCTYPE html>
+<html lang="en">
+  {{ head::head(title = page.title | default(value=section.title)) }}
+  <body>
+    <div class="head-container">
+      {% include "base/site-nav.html" %}
+      <header>
+        <div class="feature">
+          <div class="feature-title-box">
+            <h1 class="blog-title">Thoughts on backend and scaling</h1>
+          </div>
+        </div>
+      </header>
+      <div class="author">
+        <img src="/images/fb-profil.jpg" class="author-photo" />
+      </div>
+    </div>
+    <div class="container">
+      <main id="main-content">Come soon</main>
+      <aside></aside>
+
+      {% include "base/site-footer.html" %}
+    </div>
+  </body>
+</html>

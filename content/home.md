@@ -1,10 +1,8 @@
 +++
-template = "en_index.html"
+template = "index.html"
 title = "Home"
-
-[extra]
-lang = "en"
 +++
+
 # My journey
 
 Hey, my name is Richard Jonas, I am a software engineer interested in designing
@@ -56,22 +54,22 @@ go back to the Erlang/Elixir world now.
 
 ## Reading list
 
-* [Distributed systems for fun and profit](http://book.mixu.net/distsys/)
-   is a good reading, presenting complex concepts of distributed systems in an
-   easy-to-catch manner.
-* [It is okay to manage your boss](https://www.amazon.es/Okay-Manage-Your-Step-Step/dp/0470605308)
-   is useful if you need to manage up and/or manage yourself in an environment
-   when the leadership around is not enough for you. I have read multiple books
-   in this topic, I found this one the most handy.
-* [Software engineering laws](https://www.netmeister.org/blog/software-engineering-laws.html)
-   This is what it is. My favourite is Conwey's law by far. Everbody knows about
-   that and nobody can stop it.
-* [Avoiding technical bankruptcy](https://www.infoq.com/articles/avoiding-technical-bankruptcy/)
-   One of the best explanation of technical debts and bankruptcy which basically
-   the lack of courage to properly model and abstract requirements.
-* [From monolith to event-driven](https://www.infoq.com/articles/event-driven-finding-seams/)
-   is a good article what strategy we can use if we want to introduce event
-   sourcing to a legacy application.
-* [Are your "value streams" keeping you stuck in the past?](https://infoq.com/articles/value-streams-stuck-past)
-   shows how value stream disempowers your workers can cause burn-out easier
-   than else.
+- [Distributed systems for fun and profit](http://book.mixu.net/distsys/)
+  is a good reading, presenting complex concepts of distributed systems in an
+  easy-to-catch manner.
+- [It is okay to manage your boss](https://www.amazon.es/Okay-Manage-Your-Step-Step/dp/0470605308)
+  is useful if you need to manage up and/or manage yourself in an environment
+  when the leadership around is not enough for you. I have read multiple books
+  in this topic, I found this one the most handy.
+- [Software engineering laws](https://www.netmeister.org/blog/software-engineering-laws.html)
+  This is what it is. My favourite is Conwey's law by far. Everbody knows about
+  that and nobody can stop it.
+- [Avoiding technical bankruptcy](https://www.infoq.com/articles/avoiding-technical-bankruptcy/)
+  One of the best explanation of technical debts and bankruptcy which basically
+  the lack of courage to properly model and abstract requirements.
+- [From monolith to event-driven](https://www.infoq.com/articles/event-driven-finding-seams/)
+  is a good article what strategy we can use if we want to introduce event
+  sourcing to a legacy application.
+- [Are your "value streams" keeping you stuck in the past?](https://infoq.com/articles/value-streams-stuck-past)
+  shows how value stream disempowers your workers can cause burn-out easier
+  than else.
