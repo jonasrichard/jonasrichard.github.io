@@ -18,7 +18,13 @@
       </div>
     </div>
     <div class="container">
-      <main id="main-content">{{ page.content | safe }}</main>
+      <main id="main-content">
+        {% if section is defined and section.content is defined %}
+          {{ section.content | safe }}
+        {% else %}
+          {{ page.content | safe }}
+        {% endif %}
+      </main>
       <aside>
         <p>
           ,,If debugging is the process of removing software bugs, then
